@@ -1,1 +1,176 @@
+/* ====== General Body ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ====== Container Card ====== */
+.container {
+  width: 90%;
+  max-width: 950px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* ====== Form Styles ====== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
+
+form button {
+  padding: 12px 25px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #357ABD;
+}
+
+/* ====== Legend ====== */
+#legend {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+/* ====== Task List ====== */
+#taskList {
+  margin-top: 20px;
+}
+
+.taskItem {
+  padding: 12px 15px;
+  margin: 8px 0;
+  background: #f4f6f9;
+  border-left: 5px solid #4a90e2;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.taskItem:hover {
+  background: #e8f0fe;
+}
+
+/* ====== Gantt Chart ====== */
+#ganttChart {
+  display: flex;
+  margin-top: 25px;
+  min-height: 60px;
+  border-radius: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  background: #f0f2f5;
+}
+
+.ganttBar {
+  height: 50px;
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.ganttBar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Highlight current running task */
+.current {
+  border: 3px solid #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Skipped tasks */
+.ganttBar.skipped {
+  background: #e74c3c !important;
+}
+
+/* Near deadline tasks */
+.ganttBar.nearDeadline {
+  border: 2px dashed yellow;
+}
+
+/* Scrollbar for Gantt Chart */
+#ganttChart::-webkit-scrollbar {
+  height: 8px;
+}
+
+#ganttChart::-webkit-scrollbar-track {
+  background: #f0f2f5;
+}
+
+#ganttChart::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 4px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ganttBar {
+    font-size: 0.8rem;
+    line-height: 40px;
+    height: 40px;
+  }
+}
 
