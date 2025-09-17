@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Scheduler with Priority Queue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Scheduler with Priority Queue</h1>
+
+    <form id="taskForm">
+      <input type="text" id="taskName" placeholder="Task Name" required>
+      <input type="number" id="taskPriority" placeholder="Priority (higher = more important)" required>
+      <input type="number" id="taskTime" placeholder="Execution Time (minutes)" required>
+      <input type="number" id="taskDeadline" placeholder="Deadline (minutes from start)">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="legend">
+      <span class="legend-box" style="background-color:#4a90e2;"></span> Normal Task  
+      <span class="legend-box" style="background-color:red;"></span> Missed/Skipped Task ⚠️  
+      <span class="legend-box" style="border:3px solid black;"></span> Current Running Task
+      <span class="legend-box" style="border:2px dashed yellow;"></span> Near Deadline
+    </div>
+
+    <div id="taskList"></div>
+
+    <h2>Gantt Chart</h2>
+    <div id="ganttChart"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
 
